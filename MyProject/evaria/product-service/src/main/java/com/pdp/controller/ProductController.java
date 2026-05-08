@@ -1,8 +1,8 @@
 package com.pdp.controller;
 
 import com.base.repository.model.RepositoryItem;
+import com.pdp.model.PdpPageDTO;
 import com.pdp.model.ProductDetailsDTO;
-import com.pdp.model.SkuProductDTO;
 import com.pdp.service.ProductService;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,11 +20,8 @@ public class ProductController {
     }
 
     @GetMapping("/sku/{skuId}")
-    public SkuProductDTO getSkuDetails(@PathVariable String skuId) {
-
-        RepositoryItem sku = productService.getSku(skuId);
-        RepositoryItem product = productService.getProductFromSku(skuId);
-        return new SkuProductDTO(sku, product);
+    public PdpPageDTO getSkuDetails(@PathVariable String skuId) {
+        return productService.getPdpPageForSku(skuId);
     }
 
     @GetMapping("/product/{productId}")

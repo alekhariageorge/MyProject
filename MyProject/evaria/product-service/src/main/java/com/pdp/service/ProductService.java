@@ -1,6 +1,11 @@
 package com.pdp.service;
 
 import com.base.repository.model.RepositoryItem;
+import com.pdp.client.InventoryClient;
+import com.pdp.client.MediaClient;
+import com.pdp.client.PriceClient;
+import com.pdp.model.PdpPageDTO;
+import com.pdp.model.PdpSkuSummaryDTO;
 import com.productCatalog.repository.ProductCatalogRepository;
 import org.springframework.stereotype.Service;
 
@@ -11,10 +16,18 @@ import java.util.Map;
 public class ProductService {
 
     private final ProductCatalogRepository productRepository;
+    private final InventoryClient inventoryClient;
+    private final PriceClient priceClient;
+    private final MediaClient mediaClient;
 
-    public ProductService(ProductCatalogRepository productRepository) {
-
+    public ProductService(ProductCatalogRepository productRepository,
+                          InventoryClient inventoryClient,
+                          PriceClient priceClient,
+                          MediaClient mediaClient) {
         this.productRepository = productRepository;
+        this.inventoryClient = inventoryClient;
+        this.priceClient = priceClient;
+        this.mediaClient = mediaClient;
     }
 
     public RepositoryItem getProduct(final String productId) {
@@ -31,6 +44,28 @@ public class ProductService {
 
     public List<RepositoryItem> getSkusForProduct(String productId) {
         return productRepository.findSkusByProductId(productId);
+    }
+
+    public PdpPageDTO getPdpPageForSku(String skuId) {
+        RepositoryItem selectedSku = getSku(skuId);
+        RepositoryItem product = getProductFromSku(skuId);
+        List<PdpSkuSummaryDTO> siblingSkus = getSkusForProduct(product.getRepositoryId())
+                .stream()
+                .map(sku -> new PdpSkuSummaryDTO(
+                        sku,
+                        priceClient.getPrice(sku.getRepositoryId()),
+                        mediaClient.getSkuMainImage(sku.getRepositoryId())
+                ))
+                .toList();
+
+        return new PdpPageDTO(
+                product,
+                selectedSku,
+                inventoryClient.getInventory(skuId),
+                priceClient.getPrice(skuId),
+                mediaClient.getSkuMainImage(skuId),
+                siblingSkus
+        );
     }
 
     public RepositoryItem createProduct(String productId, Map<String, Object> propertyValues) {
