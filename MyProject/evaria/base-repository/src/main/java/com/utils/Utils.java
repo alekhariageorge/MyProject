@@ -3,7 +3,6 @@ package com.utils;
 public class Utils {
 
     public static Class<?> mapXmlTypeToJavaType(String dataType) {
-
         return switch (dataType.toLowerCase()) {
             case "string" -> String.class;
             case "double" -> Double.class;

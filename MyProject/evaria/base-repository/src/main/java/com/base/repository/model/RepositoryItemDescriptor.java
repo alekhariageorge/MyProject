@@ -1,6 +1,5 @@
 package com.base.repository.model;
 
-import java.util.HashMap;
 import java.util.Map;
 
 public class RepositoryItemDescriptor {
@@ -10,8 +9,7 @@ public class RepositoryItemDescriptor {
     private Map<String, Class<?>> propertyDefinitions;
 
     public RepositoryItemDescriptor(String descriptorName,
-                                    Map<String,Class<?>> propertyDefinitions
-                                    ) {
+                                    Map<String, Class<?>> propertyDefinitions) {
         this.itemDescriptorName = descriptorName;
         this.propertyDefinitions = propertyDefinitions;
     }
@@ -28,8 +26,7 @@ public class RepositoryItemDescriptor {
         return propertyDefinitions;
     }
 
-    public void setPropertyDefinitions(
-            Map<String, Class<?>> propertyDefinitions) {
+    public void setPropertyDefinitions(Map<String, Class<?>> propertyDefinitions) {
         this.propertyDefinitions = propertyDefinitions;
     }
 }
