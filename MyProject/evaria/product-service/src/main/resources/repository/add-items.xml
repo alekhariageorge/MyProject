@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<add-items>
+    <add-item item-descriptor="catalogFolder" id="commerceRootFolder">
+        <set-property name="displayName"><![CDATA[Commerce Catalogs]]></set-property>
+        <set-property name="description"><![CDATA[Root folder for commerce catalogs]]></set-property>
+        <set-property name="childCatalogs"><![CDATA[masterCatalog]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="catalog" id="masterCatalog">
+        <set-property name="displayName"><![CDATA[Master Catalog]]></set-property>
+        <set-property name="description"><![CDATA[Default product catalog]]></set-property>
+        <set-property name="rootCategories"><![CDATA[rootCategory]]></set-property>
+        <set-property name="allRootCategories"><![CDATA[rootCategory]]></set-property>
+        <set-property name="allProducts"><![CDATA[prod1001,prod1002,prod1003,prod2001,prod2002,prod2003,prod3001,prod3002]]></set-property>
+        <set-property name="allSkus"><![CDATA[sku1001-red,sku1001-blue,sku1001-black,sku1002-navy-m,sku1002-navy-l,sku1003-black-m,sku1003-black-l,sku2001-silver,sku2001-black,sku2002-white,sku2002-black,sku2003-green,sku3001-natural,sku3001-charcoal,sku3002-steel,sku3002-copper,bundle1001]]></set-property>
+        <set-property name="parentFolder"><![CDATA[commerceRootFolder]]></set-property>
+        <set-property name="creationDate"><![CDATA[2026-05-08]]></set-property>
+        <set-property name="lastModifiedDate"><![CDATA[2026-05-08]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="category" id="rootCategory">
+        <set-property name="displayName"><![CDATA[Root Category]]></set-property>
+        <set-property name="description"><![CDATA[Top-level navigation category]]></set-property>
+        <set-property name="childCategories"><![CDATA[apparel,electronics,home]]></set-property>
+        <set-property name="fixedChildCategories"><![CDATA[apparel,electronics,home]]></set-property>
+        <set-property name="parentCatalogs"><![CDATA[masterCatalog]]></set-property>
+        <set-property name="creationDate"><![CDATA[2026-05-08]]></set-property>
+        <set-property name="startDate"><![CDATA[2026-05-08]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="category" id="apparel">
+        <set-property name="displayName"><![CDATA[Apparel]]></set-property>
+        <set-property name="description"><![CDATA[Clothing and outdoor wear]]></set-property>
+        <set-property name="longDescription"><![CDATA[Performance apparel for cold weather, travel, and everyday use.]]></set-property>
+        <set-property name="childCategories"><![CDATA[jackets,baseLayers]]></set-property>
+        <set-property name="fixedChildCategories"><![CDATA[jackets,baseLayers]]></set-property>
+        <set-property name="parentCategories"><![CDATA[rootCategory]]></set-property>
+        <set-property name="parentCatalogs"><![CDATA[masterCatalog]]></set-property>
+        <set-property name="creationDate"><![CDATA[2026-05-08]]></set-property>
+        <set-property name="startDate"><![CDATA[2026-05-08]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="category" id="jackets">
+        <set-property name="displayName"><![CDATA[Jackets]]></set-property>
+        <set-property name="description"><![CDATA[Outerwear and winter jackets]]></set-property>
+        <set-property name="longDescription"><![CDATA[Waterproof, insulated, and mountain-ready jackets.]]></set-property>
+        <set-property name="childCategories"><![CDATA[skiJackets,rainJackets]]></set-property>
+        <set-property name="fixedChildCategories"><![CDATA[skiJackets,rainJackets]]></set-property>
+        <set-property name="childProducts"><![CDATA[prod1001,prod1002]]></set-property>
+        <set-property name="fixedChildProducts"><![CDATA[prod1001,prod1002]]></set-property>
+        <set-property name="parentCategories"><![CDATA[apparel]]></set-property>
+        <set-property name="parentCatalogs"><![CDATA[masterCatalog]]></set-property>
+        <set-property name="creationDate"><![CDATA[2026-05-08]]></set-property>
+        <set-property name="startDate"><![CDATA[2026-05-08]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="category" id="skiJackets">
+        <set-property name="displayName"><![CDATA[Ski Jackets]]></set-property>
+        <set-property name="description"><![CDATA[Insulated ski and snow jackets]]></set-property>
+        <set-property name="longDescription"><![CDATA[Technical snow jackets built for alpine conditions.]]></set-property>
+        <set-property name="childProducts"><![CDATA[prod1001]]></set-property>
+        <set-property name="fixedChildProducts"><![CDATA[prod1001]]></set-property>
+        <set-property name="parentCategories"><![CDATA[jackets]]></set-property>
+        <set-property name="parentCatalogs"><![CDATA[masterCatalog]]></set-property>
+        <set-property name="creationDate"><![CDATA[2026-05-08]]></set-property>
+        <set-property name="startDate"><![CDATA[2026-05-08]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="category" id="rainJackets">
+        <set-property name="displayName"><![CDATA[Rain Jackets]]></set-property>
+        <set-property name="description"><![CDATA[Lightweight waterproof shell jackets]]></set-property>
+        <set-property name="longDescription"><![CDATA[Packable shells for wet weather and trail use.]]></set-property>
+        <set-property name="childProducts"><![CDATA[prod1002]]></set-property>
+        <set-property name="fixedChildProducts"><![CDATA[prod1002]]></set-property>
+        <set-property name="parentCategories"><![CDATA[jackets]]></set-property>
+        <set-property name="parentCatalogs"><![CDATA[masterCatalog]]></set-property>
+        <set-property name="creationDate"><![CDATA[2026-05-08]]></set-property>
+        <set-property name="startDate"><![CDATA[2026-05-08]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="category" id="baseLayers">
+        <set-property name="displayName"><![CDATA[Base Layers]]></set-property>
+        <set-property name="description"><![CDATA[Thermal innerwear and base layers]]></set-property>
+        <set-property name="longDescription"><![CDATA[Moisture-wicking layers for cold-weather comfort.]]></set-property>
+        <set-property name="childCategories"><![CDATA[thermalTops]]></set-property>
+        <set-property name="fixedChildCategories"><![CDATA[thermalTops]]></set-property>
+        <set-property name="childProducts"><![CDATA[prod1003]]></set-property>
+        <set-property name="fixedChildProducts"><![CDATA[prod1003]]></set-property>
+        <set-property name="parentCategories"><![CDATA[apparel]]></set-property>
+        <set-property name="parentCatalogs"><![CDATA[masterCatalog]]></set-property>
+        <set-property name="creationDate"><![CDATA[2026-05-08]]></set-property>
+        <set-property name="startDate"><![CDATA[2026-05-08]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="category" id="thermalTops">
+        <set-property name="displayName"><![CDATA[Thermal Tops]]></set-property>
+        <set-property name="description"><![CDATA[Warm technical base-layer tops]]></set-property>
+        <set-property name="longDescription"><![CDATA[Stretch thermal tops for layering.]]></set-property>
+        <set-property name="childProducts"><![CDATA[prod1003]]></set-property>
+        <set-property name="fixedChildProducts"><![CDATA[prod1003]]></set-property>
+        <set-property name="parentCategories"><![CDATA[baseLayers]]></set-property>
+        <set-property name="parentCatalogs"><![CDATA[masterCatalog]]></set-property>
+        <set-property name="creationDate"><![CDATA[2026-05-08]]></set-property>
+        <set-property name="startDate"><![CDATA[2026-05-08]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="category" id="electronics">
+        <set-property name="displayName"><![CDATA[Electronics]]></set-property>
+        <set-property name="description"><![CDATA[Personal electronics and accessories]]></set-property>
+        <set-property name="childCategories"><![CDATA[wearables,audio]]></set-property>
+        <set-property name="fixedChildCategories"><![CDATA[wearables,audio]]></set-property>
+        <set-property name="parentCategories"><![CDATA[rootCategory]]></set-property>
+        <set-property name="parentCatalogs"><![CDATA[masterCatalog]]></set-property>
+        <set-property name="creationDate"><![CDATA[2026-05-08]]></set-property>
+        <set-property name="startDate"><![CDATA[2026-05-08]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="category" id="wearables">
+        <set-property name="displayName"><![CDATA[Wearables]]></set-property>
+        <set-property name="description"><![CDATA[Smart watches and fitness trackers]]></set-property>
+        <set-property name="childCategories"><![CDATA[smartWatches,fitnessTrackers]]></set-property>
+        <set-property name="fixedChildCategories"><![CDATA[smartWatches,fitnessTrackers]]></set-property>
+        <set-property name="childProducts"><![CDATA[prod2001,prod2003]]></set-property>
+        <set-property name="fixedChildProducts"><![CDATA[prod2001,prod2003]]></set-property>
+        <set-property name="parentCategories"><![CDATA[electronics]]></set-property>
+        <set-property name="parentCatalogs"><![CDATA[masterCatalog]]></set-property>
+        <set-property name="creationDate"><![CDATA[2026-05-08]]></set-property>
+        <set-property name="startDate"><![CDATA[2026-05-08]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="category" id="smartWatches">
+        <set-property name="displayName"><![CDATA[Smart Watches]]></set-property>
+        <set-property name="description"><![CDATA[Connected watches for everyday use]]></set-property>
+        <set-property name="childProducts"><![CDATA[prod2001]]></set-property>
+        <set-property name="fixedChildProducts"><![CDATA[prod2001]]></set-property>
+        <set-property name="parentCategories"><![CDATA[wearables]]></set-property>
+        <set-property name="parentCatalogs"><![CDATA[masterCatalog]]></set-property>
+        <set-property name="creationDate"><![CDATA[2026-05-08]]></set-property>
+        <set-property name="startDate"><![CDATA[2026-05-08]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="category" id="fitnessTrackers">
+        <set-property name="displayName"><![CDATA[Fitness Trackers]]></set-property>
+        <set-property name="description"><![CDATA[Activity and health tracking bands]]></set-property>
+        <set-property name="childProducts"><![CDATA[prod2003]]></set-property>
+        <set-property name="fixedChildProducts"><![CDATA[prod2003]]></set-property>
+        <set-property name="parentCategories"><![CDATA[wearables]]></set-property>
+        <set-property name="parentCatalogs"><![CDATA[masterCatalog]]></set-property>
+        <set-property name="creationDate"><![CDATA[2026-05-08]]></set-property>
+        <set-property name="startDate"><![CDATA[2026-05-08]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="category" id="audio">
+        <set-property name="displayName"><![CDATA[Audio]]></set-property>
+        <set-property name="description"><![CDATA[Headphones and portable audio]]></set-property>
+        <set-property name="childCategories"><![CDATA[headphones]]></set-property>
+        <set-property name="fixedChildCategories"><![CDATA[headphones]]></set-property>
+        <set-property name="childProducts"><![CDATA[prod2002]]></set-property>
+        <set-property name="fixedChildProducts"><![CDATA[prod2002]]></set-property>
+        <set-property name="parentCategories"><![CDATA[electronics]]></set-property>
+        <set-property name="parentCatalogs"><![CDATA[masterCatalog]]></set-property>
+        <set-property name="creationDate"><![CDATA[2026-05-08]]></set-property>
+        <set-property name="startDate"><![CDATA[2026-05-08]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="category" id="headphones">
+        <set-property name="displayName"><![CDATA[Headphones]]></set-property>
+        <set-property name="description"><![CDATA[Wireless and noise-cancelling headphones]]></set-property>
+        <set-property name="childProducts"><![CDATA[prod2002]]></set-property>
+        <set-property name="fixedChildProducts"><![CDATA[prod2002]]></set-property>
+        <set-property name="parentCategories"><![CDATA[audio]]></set-property>
+        <set-property name="parentCatalogs"><![CDATA[masterCatalog]]></set-property>
+        <set-property name="creationDate"><![CDATA[2026-05-08]]></set-property>
+        <set-property name="startDate"><![CDATA[2026-05-08]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="category" id="home">
+        <set-property name="displayName"><![CDATA[Home]]></set-property>
+        <set-property name="description"><![CDATA[Home and kitchen essentials]]></set-property>
+        <set-property name="childCategories"><![CDATA[kitchen,decor]]></set-property>
+        <set-property name="fixedChildCategories"><![CDATA[kitchen,decor]]></set-property>
+        <set-property name="parentCategories"><![CDATA[rootCategory]]></set-property>
+        <set-property name="parentCatalogs"><![CDATA[masterCatalog]]></set-property>
+        <set-property name="creationDate"><![CDATA[2026-05-08]]></set-property>
+        <set-property name="startDate"><![CDATA[2026-05-08]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="category" id="kitchen">
+        <set-property name="displayName"><![CDATA[Kitchen]]></set-property>
+        <set-property name="description"><![CDATA[Cookware and daily kitchen tools]]></set-property>
+        <set-property name="childCategories"><![CDATA[cookware]]></set-property>
+        <set-property name="fixedChildCategories"><![CDATA[cookware]]></set-property>
+        <set-property name="childProducts"><![CDATA[prod3002]]></set-property>
+        <set-property name="fixedChildProducts"><![CDATA[prod3002]]></set-property>
+        <set-property name="parentCategories"><![CDATA[home]]></set-property>
+        <set-property name="parentCatalogs"><![CDATA[masterCatalog]]></set-property>
+        <set-property name="creationDate"><![CDATA[2026-05-08]]></set-property>
+        <set-property name="startDate"><![CDATA[2026-05-08]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="category" id="cookware">
+        <set-property name="displayName"><![CDATA[Cookware]]></set-property>
+        <set-property name="description"><![CDATA[Pans, pots, and cookware sets]]></set-property>
+        <set-property name="childProducts"><![CDATA[prod3002]]></set-property>
+        <set-property name="fixedChildProducts"><![CDATA[prod3002]]></set-property>
+        <set-property name="parentCategories"><![CDATA[kitchen]]></set-property>
+        <set-property name="parentCatalogs"><![CDATA[masterCatalog]]></set-property>
+        <set-property name="creationDate"><![CDATA[2026-05-08]]></set-property>
+        <set-property name="startDate"><![CDATA[2026-05-08]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="category" id="decor">
+        <set-property name="displayName"><![CDATA[Decor]]></set-property>
+        <set-property name="description"><![CDATA[Soft furnishings and decor]]></set-property>
+        <set-property name="childCategories"><![CDATA[throws]]></set-property>
+        <set-property name="fixedChildCategories"><![CDATA[throws]]></set-property>
+        <set-property name="childProducts"><![CDATA[prod3001]]></set-property>
+        <set-property name="fixedChildProducts"><![CDATA[prod3001]]></set-property>
+        <set-property name="parentCategories"><![CDATA[home]]></set-property>
+        <set-property name="parentCatalogs"><![CDATA[masterCatalog]]></set-property>
+        <set-property name="creationDate"><![CDATA[2026-05-08]]></set-property>
+        <set-property name="startDate"><![CDATA[2026-05-08]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="category" id="throws">
+        <set-property name="displayName"><![CDATA[Throws]]></set-property>
+        <set-property name="description"><![CDATA[Blankets and decorative throws]]></set-property>
+        <set-property name="childProducts"><![CDATA[prod3001]]></set-property>
+        <set-property name="fixedChildProducts"><![CDATA[prod3001]]></set-property>
+        <set-property name="parentCategories"><![CDATA[decor]]></set-property>
+        <set-property name="parentCatalogs"><![CDATA[masterCatalog]]></set-property>
+        <set-property name="creationDate"><![CDATA[2026-05-08]]></set-property>
+        <set-property name="startDate"><![CDATA[2026-05-08]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="product" id="prod1001">
+        <set-property name="displayName"><![CDATA[Winter Ski Jacket]]></set-property>
+        <set-property name="description"><![CDATA[Waterproof ski jacket with color variants]]></set-property>
+        <set-property name="longDescription"><![CDATA[A waterproof winter ski jacket with insulated lining and color-specific SKUs.]]></set-property>
+        <set-property name="brand"><![CDATA[Evaria Alpine]]></set-property>
+        <set-property name="type"><![CDATA[outerwear]]></set-property>
+        <set-property name="template"><![CDATA[/templates/product-detail.jsp]]></set-property>
+        <set-property name="creationDate"><![CDATA[2026-05-08]]></set-property>
+        <set-property name="startDate"><![CDATA[2026-05-08]]></set-property>
+        <set-property name="onlineOnly"><![CDATA[false]]></set-property>
+        <set-property name="hasColorVariants"><![CDATA[true]]></set-property>
+        <set-property name="childSkus"><![CDATA[sku1001-red,sku1001-blue,sku1001-black]]></set-property>
+        <set-property name="fixedChildSkus"><![CDATA[sku1001-red,sku1001-blue,sku1001-black]]></set-property>
+        <set-property name="defaultSku"><![CDATA[sku1001-red]]></set-property>
+        <set-property name="parentCategories"><![CDATA[jackets,skiJackets]]></set-property>
+        <set-property name="catalogs"><![CDATA[masterCatalog]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="product" id="prod1002">
+        <set-property name="displayName"><![CDATA[Trail Rain Shell]]></set-property>
+        <set-property name="description"><![CDATA[Packable waterproof rain jacket]]></set-property>
+        <set-property name="longDescription"><![CDATA[A lightweight rain shell for travel, hiking, and monsoon commutes.]]></set-property>
+        <set-property name="brand"><![CDATA[Evaria Trail]]></set-property>
+        <set-property name="type"><![CDATA[outerwear]]></set-property>
+        <set-property name="template"><![CDATA[/templates/product-detail.jsp]]></set-property>
+        <set-property name="creationDate"><![CDATA[2026-05-08]]></set-property>
+        <set-property name="startDate"><![CDATA[2026-05-08]]></set-property>
+        <set-property name="onlineOnly"><![CDATA[false]]></set-property>
+        <set-property name="hasColorVariants"><![CDATA[false]]></set-property>
+        <set-property name="childSkus"><![CDATA[sku1002-navy-m,sku1002-navy-l]]></set-property>
+        <set-property name="fixedChildSkus"><![CDATA[sku1002-navy-m,sku1002-navy-l]]></set-property>
+        <set-property name="defaultSku"><![CDATA[sku1002-navy-m]]></set-property>
+        <set-property name="parentCategories"><![CDATA[jackets,rainJackets]]></set-property>
+        <set-property name="catalogs"><![CDATA[masterCatalog]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="product" id="prod1003">
+        <set-property name="displayName"><![CDATA[Thermal Base Layer Top]]></set-property>
+        <set-property name="description"><![CDATA[Warm stretch thermal top]]></set-property>
+        <set-property name="longDescription"><![CDATA[A moisture-wicking thermal top for layering under jackets.]]></set-property>
+        <set-property name="brand"><![CDATA[Evaria Alpine]]></set-property>
+        <set-property name="type"><![CDATA[base-layer]]></set-property>
+        <set-property name="template"><![CDATA[/templates/product-detail.jsp]]></set-property>
+        <set-property name="creationDate"><![CDATA[2026-05-08]]></set-property>
+        <set-property name="startDate"><![CDATA[2026-05-08]]></set-property>
+        <set-property name="onlineOnly"><![CDATA[true]]></set-property>
+        <set-property name="hasColorVariants"><![CDATA[false]]></set-property>
+        <set-property name="childSkus"><![CDATA[sku1003-black-m,sku1003-black-l]]></set-property>
+        <set-property name="fixedChildSkus"><![CDATA[sku1003-black-m,sku1003-black-l]]></set-property>
+        <set-property name="defaultSku"><![CDATA[sku1003-black-m]]></set-property>
+        <set-property name="parentCategories"><![CDATA[baseLayers,thermalTops]]></set-property>
+        <set-property name="catalogs"><![CDATA[masterCatalog]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="product" id="prod2001">
+        <set-property name="displayName"><![CDATA[Summit Smart Watch]]></set-property>
+        <set-property name="description"><![CDATA[GPS smart watch with health tracking]]></set-property>
+        <set-property name="longDescription"><![CDATA[A rugged GPS smart watch for workouts, routes, and daily health metrics.]]></set-property>
+        <set-property name="brand"><![CDATA[Evaria Tech]]></set-property>
+        <set-property name="type"><![CDATA[wearable]]></set-property>
+        <set-property name="template"><![CDATA[/templates/product-detail.jsp]]></set-property>
+        <set-property name="creationDate"><![CDATA[2026-05-08]]></set-property>
+        <set-property name="startDate"><![CDATA[2026-05-08]]></set-property>
+        <set-property name="onlineOnly"><![CDATA[false]]></set-property>
+        <set-property name="hasColorVariants"><![CDATA[true]]></set-property>
+        <set-property name="childSkus"><![CDATA[sku2001-silver,sku2001-black]]></set-property>
+        <set-property name="fixedChildSkus"><![CDATA[sku2001-silver,sku2001-black]]></set-property>
+        <set-property name="defaultSku"><![CDATA[sku2001-silver]]></set-property>
+        <set-property name="parentCategories"><![CDATA[wearables,smartWatches]]></set-property>
+        <set-property name="catalogs"><![CDATA[masterCatalog]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="product" id="prod2002">
+        <set-property name="displayName"><![CDATA[Noise Cancelling Headphones]]></set-property>
+        <set-property name="description"><![CDATA[Wireless headphones with active noise cancellation]]></set-property>
+        <set-property name="longDescription"><![CDATA[Comfortable over-ear wireless headphones with long battery life.]]></set-property>
+        <set-property name="brand"><![CDATA[Evaria Audio]]></set-property>
+        <set-property name="type"><![CDATA[audio]]></set-property>
+        <set-property name="template"><![CDATA[/templates/product-detail.jsp]]></set-property>
+        <set-property name="creationDate"><![CDATA[2026-05-08]]></set-property>
+        <set-property name="startDate"><![CDATA[2026-05-08]]></set-property>
+        <set-property name="onlineOnly"><![CDATA[false]]></set-property>
+        <set-property name="hasColorVariants"><![CDATA[true]]></set-property>
+        <set-property name="childSkus"><![CDATA[sku2002-white,sku2002-black]]></set-property>
+        <set-property name="fixedChildSkus"><![CDATA[sku2002-white,sku2002-black]]></set-property>
+        <set-property name="defaultSku"><![CDATA[sku2002-black]]></set-property>
+        <set-property name="parentCategories"><![CDATA[audio,headphones]]></set-property>
+        <set-property name="catalogs"><![CDATA[masterCatalog]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="product" id="prod2003">
+        <set-property name="displayName"><![CDATA[Everyday Fitness Band]]></set-property>
+        <set-property name="description"><![CDATA[Lightweight activity and sleep tracker]]></set-property>
+        <set-property name="longDescription"><![CDATA[A slim fitness band with activity, sleep, and heart-rate tracking.]]></set-property>
+        <set-property name="brand"><![CDATA[Evaria Tech]]></set-property>
+        <set-property name="type"><![CDATA[wearable]]></set-property>
+        <set-property name="template"><![CDATA[/templates/product-detail.jsp]]></set-property>
+        <set-property name="creationDate"><![CDATA[2026-05-08]]></set-property>
+        <set-property name="startDate"><![CDATA[2026-05-08]]></set-property>
+        <set-property name="onlineOnly"><![CDATA[true]]></set-property>
+        <set-property name="hasColorVariants"><![CDATA[false]]></set-property>
+        <set-property name="childSkus"><![CDATA[sku2003-green]]></set-property>
+        <set-property name="fixedChildSkus"><![CDATA[sku2003-green]]></set-property>
+        <set-property name="defaultSku"><![CDATA[sku2003-green]]></set-property>
+        <set-property name="parentCategories"><![CDATA[wearables,fitnessTrackers]]></set-property>
+        <set-property name="catalogs"><![CDATA[masterCatalog]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="product" id="prod3001">
+        <set-property name="displayName"><![CDATA[Wool Throw Blanket]]></set-property>
+        <set-property name="description"><![CDATA[Soft woven wool throw]]></set-property>
+        <set-property name="longDescription"><![CDATA[A warm wool-blend throw for sofa, bed, and reading corners.]]></set-property>
+        <set-property name="brand"><![CDATA[Evaria Home]]></set-property>
+        <set-property name="type"><![CDATA[decor]]></set-property>
+        <set-property name="template"><![CDATA[/templates/product-detail.jsp]]></set-property>
+        <set-property name="creationDate"><![CDATA[2026-05-08]]></set-property>
+        <set-property name="startDate"><![CDATA[2026-05-08]]></set-property>
+        <set-property name="onlineOnly"><![CDATA[false]]></set-property>
+        <set-property name="hasColorVariants"><![CDATA[true]]></set-property>
+        <set-property name="childSkus"><![CDATA[sku3001-natural,sku3001-charcoal]]></set-property>
+        <set-property name="fixedChildSkus"><![CDATA[sku3001-natural,sku3001-charcoal]]></set-property>
+        <set-property name="defaultSku"><![CDATA[sku3001-natural]]></set-property>
+        <set-property name="parentCategories"><![CDATA[decor,throws]]></set-property>
+        <set-property name="catalogs"><![CDATA[masterCatalog]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="product" id="prod3002">
+        <set-property name="displayName"><![CDATA[Stainless Cookware Set]]></set-property>
+        <set-property name="description"><![CDATA[Three-piece stainless cookware set]]></set-property>
+        <set-property name="longDescription"><![CDATA[A durable cookware set with sauce pan, saute pan, and stock pot.]]></set-property>
+        <set-property name="brand"><![CDATA[Evaria Kitchen]]></set-property>
+        <set-property name="type"><![CDATA[kitchen]]></set-property>
+        <set-property name="template"><![CDATA[/templates/product-detail.jsp]]></set-property>
+        <set-property name="creationDate"><![CDATA[2026-05-08]]></set-property>
+        <set-property name="startDate"><![CDATA[2026-05-08]]></set-property>
+        <set-property name="onlineOnly"><![CDATA[false]]></set-property>
+        <set-property name="hasColorVariants"><![CDATA[false]]></set-property>
+        <set-property name="childSkus"><![CDATA[sku3002-steel,sku3002-copper]]></set-property>
+        <set-property name="fixedChildSkus"><![CDATA[sku3002-steel,sku3002-copper]]></set-property>
+        <set-property name="defaultSku"><![CDATA[sku3002-steel]]></set-property>
+        <set-property name="parentCategories"><![CDATA[kitchen,cookware]]></set-property>
+        <set-property name="catalogs"><![CDATA[masterCatalog]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="sku" id="sku1001-red">
+        <set-property name="displayName"><![CDATA[Winter Ski Jacket - Red]]></set-property>
+        <set-property name="description"><![CDATA[Red color ski jacket]]></set-property>
+        <set-property name="longDescription"><![CDATA[Medium red ski jacket SKU.]]></set-property>
+        <set-property name="productId"><![CDATA[prod1001]]></set-property>
+        <set-property name="catalogs"><![CDATA[masterCatalog]]></set-property>
+        <set-property name="parentProducts"><![CDATA[prod1001]]></set-property>
+        <set-property name="available"><![CDATA[true]]></set-property>
+        <set-property name="color"><![CDATA[Red]]></set-property>
+        <set-property name="size"><![CDATA[M]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="sku" id="sku1001-blue">
+        <set-property name="displayName"><![CDATA[Winter Ski Jacket - Blue]]></set-property>
+        <set-property name="description"><![CDATA[Blue color ski jacket]]></set-property>
+        <set-property name="longDescription"><![CDATA[Medium blue ski jacket SKU.]]></set-property>
+        <set-property name="productId"><![CDATA[prod1001]]></set-property>
+        <set-property name="catalogs"><![CDATA[masterCatalog]]></set-property>
+        <set-property name="parentProducts"><![CDATA[prod1001]]></set-property>
+        <set-property name="available"><![CDATA[true]]></set-property>
+        <set-property name="color"><![CDATA[Blue]]></set-property>
+        <set-property name="size"><![CDATA[M]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="sku" id="sku1001-black">
+        <set-property name="displayName"><![CDATA[Winter Ski Jacket - Black]]></set-property>
+        <set-property name="description"><![CDATA[Black color ski jacket]]></set-property>
+        <set-property name="longDescription"><![CDATA[Medium black ski jacket SKU.]]></set-property>
+        <set-property name="productId"><![CDATA[prod1001]]></set-property>
+        <set-property name="catalogs"><![CDATA[masterCatalog]]></set-property>
+        <set-property name="parentProducts"><![CDATA[prod1001]]></set-property>
+        <set-property name="available"><![CDATA[true]]></set-property>
+        <set-property name="color"><![CDATA[Black]]></set-property>
+        <set-property name="size"><![CDATA[M]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="sku" id="sku1002-navy-m">
+        <set-property name="displayName"><![CDATA[Trail Rain Shell - Navy M]]></set-property>
+        <set-property name="description"><![CDATA[Navy rain shell in medium]]></set-property>
+        <set-property name="productId"><![CDATA[prod1002]]></set-property>
+        <set-property name="catalogs"><![CDATA[masterCatalog]]></set-property>
+        <set-property name="parentProducts"><![CDATA[prod1002]]></set-property>
+        <set-property name="available"><![CDATA[true]]></set-property>
+        <set-property name="color"><![CDATA[Navy]]></set-property>
+        <set-property name="size"><![CDATA[M]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="sku" id="sku1002-navy-l">
+        <set-property name="displayName"><![CDATA[Trail Rain Shell - Navy L]]></set-property>
+        <set-property name="description"><![CDATA[Navy rain shell in large]]></set-property>
+        <set-property name="productId"><![CDATA[prod1002]]></set-property>
+        <set-property name="catalogs"><![CDATA[masterCatalog]]></set-property>
+        <set-property name="parentProducts"><![CDATA[prod1002]]></set-property>
+        <set-property name="available"><![CDATA[true]]></set-property>
+        <set-property name="color"><![CDATA[Navy]]></set-property>
+        <set-property name="size"><![CDATA[L]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="sku" id="sku1003-black-m">
+        <set-property name="displayName"><![CDATA[Thermal Base Layer Top - Black M]]></set-property>
+        <set-property name="description"><![CDATA[Black thermal top in medium]]></set-property>
+        <set-property name="productId"><![CDATA[prod1003]]></set-property>
+        <set-property name="catalogs"><![CDATA[masterCatalog]]></set-property>
+        <set-property name="parentProducts"><![CDATA[prod1003]]></set-property>
+        <set-property name="available"><![CDATA[true]]></set-property>
+        <set-property name="color"><![CDATA[Black]]></set-property>
+        <set-property name="size"><![CDATA[M]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="sku" id="sku1003-black-l">
+        <set-property name="displayName"><![CDATA[Thermal Base Layer Top - Black L]]></set-property>
+        <set-property name="description"><![CDATA[Black thermal top in large]]></set-property>
+        <set-property name="productId"><![CDATA[prod1003]]></set-property>
+        <set-property name="catalogs"><![CDATA[masterCatalog]]></set-property>
+        <set-property name="parentProducts"><![CDATA[prod1003]]></set-property>
+        <set-property name="available"><![CDATA[true]]></set-property>
+        <set-property name="color"><![CDATA[Black]]></set-property>
+        <set-property name="size"><![CDATA[L]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="sku" id="sku2001-silver">
+        <set-property name="displayName"><![CDATA[Summit Smart Watch - Silver]]></set-property>
+        <set-property name="description"><![CDATA[Silver GPS smart watch]]></set-property>
+        <set-property name="productId"><![CDATA[prod2001]]></set-property>
+        <set-property name="catalogs"><![CDATA[masterCatalog]]></set-property>
+        <set-property name="parentProducts"><![CDATA[prod2001]]></set-property>
+        <set-property name="available"><![CDATA[true]]></set-property>
+        <set-property name="color"><![CDATA[Silver]]></set-property>
+        <set-property name="size"><![CDATA[One Size]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="sku" id="sku2001-black">
+        <set-property name="displayName"><![CDATA[Summit Smart Watch - Black]]></set-property>
+        <set-property name="description"><![CDATA[Black GPS smart watch]]></set-property>
+        <set-property name="productId"><![CDATA[prod2001]]></set-property>
+        <set-property name="catalogs"><![CDATA[masterCatalog]]></set-property>
+        <set-property name="parentProducts"><![CDATA[prod2001]]></set-property>
+        <set-property name="available"><![CDATA[true]]></set-property>
+        <set-property name="color"><![CDATA[Black]]></set-property>
+        <set-property name="size"><![CDATA[One Size]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="sku" id="sku2002-white">
+        <set-property name="displayName"><![CDATA[Noise Cancelling Headphones - White]]></set-property>
+        <set-property name="description"><![CDATA[White wireless headphones]]></set-property>
+        <set-property name="productId"><![CDATA[prod2002]]></set-property>
+        <set-property name="catalogs"><![CDATA[masterCatalog]]></set-property>
+        <set-property name="parentProducts"><![CDATA[prod2002]]></set-property>
+        <set-property name="available"><![CDATA[true]]></set-property>
+        <set-property name="color"><![CDATA[White]]></set-property>
+        <set-property name="size"><![CDATA[One Size]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="sku" id="sku2002-black">
+        <set-property name="displayName"><![CDATA[Noise Cancelling Headphones - Black]]></set-property>
+        <set-property name="description"><![CDATA[Black wireless headphones]]></set-property>
+        <set-property name="productId"><![CDATA[prod2002]]></set-property>
+        <set-property name="catalogs"><![CDATA[masterCatalog]]></set-property>
+        <set-property name="parentProducts"><![CDATA[prod2002]]></set-property>
+        <set-property name="available"><![CDATA[true]]></set-property>
+        <set-property name="color"><![CDATA[Black]]></set-property>
+        <set-property name="size"><![CDATA[One Size]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="sku" id="sku2003-green">
+        <set-property name="displayName"><![CDATA[Everyday Fitness Band - Green]]></set-property>
+        <set-property name="description"><![CDATA[Green fitness tracking band]]></set-property>
+        <set-property name="productId"><![CDATA[prod2003]]></set-property>
+        <set-property name="catalogs"><![CDATA[masterCatalog]]></set-property>
+        <set-property name="parentProducts"><![CDATA[prod2003]]></set-property>
+        <set-property name="available"><![CDATA[true]]></set-property>
+        <set-property name="color"><![CDATA[Green]]></set-property>
+        <set-property name="size"><![CDATA[One Size]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="sku" id="sku3001-natural">
+        <set-property name="displayName"><![CDATA[Wool Throw Blanket - Natural]]></set-property>
+        <set-property name="description"><![CDATA[Natural wool throw blanket]]></set-property>
+        <set-property name="productId"><![CDATA[prod3001]]></set-property>
+        <set-property name="catalogs"><![CDATA[masterCatalog]]></set-property>
+        <set-property name="parentProducts"><![CDATA[prod3001]]></set-property>
+        <set-property name="available"><![CDATA[true]]></set-property>
+        <set-property name="color"><![CDATA[Natural]]></set-property>
+        <set-property name="size"><![CDATA[Standard]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="sku" id="sku3001-charcoal">
+        <set-property name="displayName"><![CDATA[Wool Throw Blanket - Charcoal]]></set-property>
+        <set-property name="description"><![CDATA[Charcoal wool throw blanket]]></set-property>
+        <set-property name="productId"><![CDATA[prod3001]]></set-property>
+        <set-property name="catalogs"><![CDATA[masterCatalog]]></set-property>
+        <set-property name="parentProducts"><![CDATA[prod3001]]></set-property>
+        <set-property name="available"><![CDATA[true]]></set-property>
+        <set-property name="color"><![CDATA[Charcoal]]></set-property>
+        <set-property name="size"><![CDATA[Standard]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="sku" id="sku3002-steel">
+        <set-property name="displayName"><![CDATA[Stainless Cookware Set - Steel]]></set-property>
+        <set-property name="description"><![CDATA[Stainless steel cookware set]]></set-property>
+        <set-property name="productId"><![CDATA[prod3002]]></set-property>
+        <set-property name="catalogs"><![CDATA[masterCatalog]]></set-property>
+        <set-property name="parentProducts"><![CDATA[prod3002]]></set-property>
+        <set-property name="available"><![CDATA[true]]></set-property>
+        <set-property name="color"><![CDATA[Steel]]></set-property>
+        <set-property name="size"><![CDATA[3 Piece]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="sku" id="sku3002-copper">
+        <set-property name="displayName"><![CDATA[Stainless Cookware Set - Copper]]></set-property>
+        <set-property name="description"><![CDATA[Copper accent cookware set]]></set-property>
+        <set-property name="productId"><![CDATA[prod3002]]></set-property>
+        <set-property name="catalogs"><![CDATA[masterCatalog]]></set-property>
+        <set-property name="parentProducts"><![CDATA[prod3002]]></set-property>
+        <set-property name="available"><![CDATA[true]]></set-property>
+        <set-property name="color"><![CDATA[Copper]]></set-property>
+        <set-property name="size"><![CDATA[3 Piece]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="sku" id="bundle1001">
+        <set-property name="displayName"><![CDATA[Winter Ski Jacket Bundle]]></set-property>
+        <set-property name="description"><![CDATA[Bundle SKU for jacket starter kit]]></set-property>
+        <set-property name="productId"><![CDATA[prod1001]]></set-property>
+        <set-property name="catalogs"><![CDATA[masterCatalog]]></set-property>
+        <set-property name="parentProducts"><![CDATA[prod1001]]></set-property>
+        <set-property name="bundleLinks"><![CDATA[bundle1001-red-link,bundle1001-blue-link]]></set-property>
+        <set-property name="available"><![CDATA[true]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="skuLink" id="bundle1001-red-link">
+        <set-property name="displayName"><![CDATA[Bundle Red Jacket Link]]></set-property>
+        <set-property name="parentSku"><![CDATA[bundle1001]]></set-property>
+        <set-property name="childSku"><![CDATA[sku1001-red]]></set-property>
+        <set-property name="quantity"><![CDATA[1]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="skuLink" id="bundle1001-blue-link">
+        <set-property name="displayName"><![CDATA[Bundle Blue Jacket Link]]></set-property>
+        <set-property name="parentSku"><![CDATA[bundle1001]]></set-property>
+        <set-property name="childSku"><![CDATA[sku1001-blue]]></set-property>
+        <set-property name="quantity"><![CDATA[1]]></set-property>
+    </add-item>
+</add-items>

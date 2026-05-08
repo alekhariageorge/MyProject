@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<add-items>
+    <add-item item-descriptor="media-external" id="sku1001-red-large">
+        <set-property name="mediaType"><![CDATA[image]]></set-property>
+        <set-property name="displayName"><![CDATA[Winter Ski Jacket Red Large Image]]></set-property>
+        <set-property name="description"><![CDATA[Large product image for the red ski jacket SKU]]></set-property>
+        <set-property name="url"><![CDATA[https://cdn.example.com/products/sku1001-red-large.jpg]]></set-property>
+        <set-property name="mimeType"><![CDATA[image/jpeg]]></set-property>
+        <set-property name="altText"><![CDATA[Red winter ski jacket]]></set-property>
+        <set-property name="width"><![CDATA[1200]]></set-property>
+        <set-property name="height"><![CDATA[1600]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="media-external" id="sku1001-blue-large">
+        <set-property name="mediaType"><![CDATA[image]]></set-property>
+        <set-property name="displayName"><![CDATA[Winter Ski Jacket Blue Large Image]]></set-property>
+        <set-property name="description"><![CDATA[Large product image for the blue ski jacket SKU]]></set-property>
+        <set-property name="url"><![CDATA[https://cdn.example.com/products/sku1001-blue-large.jpg]]></set-property>
+        <set-property name="mimeType"><![CDATA[image/jpeg]]></set-property>
+        <set-property name="altText"><![CDATA[Blue winter ski jacket]]></set-property>
+        <set-property name="width"><![CDATA[1200]]></set-property>
+        <set-property name="height"><![CDATA[1600]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="media-internal-binary" id="prod1001-thumbnail">
+        <set-property name="mediaType"><![CDATA[image]]></set-property>
+        <set-property name="displayName"><![CDATA[Winter Ski Jacket Thumbnail]]></set-property>
+        <set-property name="description"><![CDATA[Thumbnail image for the winter ski jacket product]]></set-property>
+        <set-property name="path"><![CDATA[/images/products/prod1001-thumbnail.jpg]]></set-property>
+        <set-property name="mimeType"><![CDATA[image/jpeg]]></set-property>
+        <set-property name="altText"><![CDATA[Winter ski jacket thumbnail]]></set-property>
+        <set-property name="width"><![CDATA[300]]></set-property>
+        <set-property name="height"><![CDATA[400]]></set-property>
+    </add-item>
+</add-items>

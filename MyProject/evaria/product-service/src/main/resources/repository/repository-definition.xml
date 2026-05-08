@@ -1,0 +1,112 @@
+<gsa-template name="Product Catalog">
+    <header>
+        <name>Product Catalog</name>
+        <description>Repository for catalogs, categories, products, SKUs, configurable SKUs, and SKU bundles</description>
+    </header>
+
+    <item-descriptor name="catalogFolder" display-property="displayName" query-cache-size="1000">
+        <table name="dcs_catalog_folder" type="primary" id-column-name="folder_id">
+            <property name="id" column-name="folder_id" data-type="string"/>
+            <property name="displayName" column-name="display_name" data-type="string"/>
+            <property name="description" column-name="description" data-type="string"/>
+            <property name="parentFolder" column-name="parent_folder_id" item-type="catalogFolder" data-type="string"/>
+            <property name="childFolders" column-name="folder_id" item-type="catalogFolder" data-type="list"/>
+            <property name="childCatalogs" column-name="folder_id" item-type="catalog" data-type="list"/>
+        </table>
+    </item-descriptor>
+
+    <item-descriptor name="catalog" display-property="displayName" query-cache-size="1000">
+        <table name="dcs_catalog" type="primary" id-column-name="catalog_id">
+            <property name="id" column-name="catalog_id" data-type="string"/>
+            <property name="displayName" column-name="display_name" data-type="string"/>
+            <property name="description" column-name="description" data-type="string"/>
+            <property name="rootCategories" column-name="catalog_id" item-type="category" data-type="list"/>
+            <property name="allRootCategories" column-name="catalog_id" item-type="category" data-type="list"/>
+            <property name="allProducts" column-name="catalog_id" item-type="product" data-type="list"/>
+            <property name="allSkus" column-name="catalog_id" item-type="sku" data-type="list"/>
+            <property name="rootSubCatalogs" column-name="catalog_id" item-type="catalog" data-type="list"/>
+            <property name="parentFolder" column-name="parent_folder_id" item-type="catalogFolder" data-type="string"/>
+            <property name="creationDate" column-name="creation_date" data-type="date"/>
+            <property name="lastModifiedDate" column-name="last_modified_date" data-type="date"/>
+        </table>
+    </item-descriptor>
+
+    <item-descriptor name="category" display-property="displayName" query-cache-size="1000">
+        <table name="dcs_category" type="primary" id-column-name="category_id">
+            <property name="id" column-name="category_id" data-type="string"/>
+            <property name="displayName" column-name="display_name" data-type="string"/>
+            <property name="description" column-name="description" data-type="string"/>
+            <property name="longDescription" column-name="long_description" data-type="string"/>
+            <property name="template" column-name="template" data-type="string"/>
+            <property name="creationDate" column-name="creation_date" data-type="date"/>
+            <property name="startDate" column-name="start_date" data-type="date"/>
+            <property name="endDate" column-name="end_date" data-type="date"/>
+            <property name="fixedChildCategories" column-name="category_id" item-type="category" data-type="list"/>
+            <property name="childCategories" column-name="category_id" item-type="category" data-type="list"/>
+            <property name="fixedChildProducts" column-name="category_id" item-type="product" data-type="list"/>
+            <property name="childProducts" column-name="category_id" item-type="product" data-type="list"/>
+            <property name="parentCategories" column-name="category_id" item-type="category" data-type="list"/>
+            <property name="parentCatalogs" column-name="category_id" item-type="catalog" data-type="list"/>
+        </table>
+    </item-descriptor>
+
+    <item-descriptor name="product" display-property="displayName" query-cache-size="1000">
+        <table name="dcs_product" type="primary" id-column-name="product_id">
+            <property name="id" column-name="product_id" data-type="string"/>
+            <property name="displayName" column-name="display_name" data-type="string"/>
+            <property name="description" column-name="description" data-type="string"/>
+            <property name="longDescription" column-name="long_description" data-type="string"/>
+            <property name="brand" column-name="brand" data-type="string"/>
+            <property name="type" column-name="product_type" data-type="string"/>
+            <property name="template" column-name="template" data-type="string"/>
+            <property name="creationDate" column-name="creation_date" data-type="date"/>
+            <property name="startDate" column-name="start_date" data-type="date"/>
+            <property name="endDate" column-name="end_date" data-type="date"/>
+            <property name="onlineOnly" column-name="online_only" data-type="boolean"/>
+            <property name="hasColorVariants" column-name="has_color_variants" data-type="boolean"/>
+            <property name="childSkus" column-name="product_id" item-type="sku" data-type="list"/>
+            <property name="fixedChildSkus" column-name="product_id" item-type="sku" data-type="list"/>
+            <property name="defaultSku" column-name="default_sku_id" item-type="sku" data-type="string"/>
+            <property name="parentCategories" column-name="product_id" item-type="category" data-type="list"/>
+            <property name="catalogs" column-name="product_id" item-type="catalog" data-type="list"/>
+        </table>
+    </item-descriptor>
+
+    <item-descriptor name="sku" display-property="displayName" query-cache-size="1000">
+        <table name="dcs_sku" type="primary" id-column-name="sku_id">
+            <property name="id" column-name="sku_id" data-type="string"/>
+            <property name="displayName" column-name="display_name" data-type="string"/>
+            <property name="description" column-name="description" data-type="string"/>
+            <property name="longDescription" column-name="long_description" data-type="string"/>
+            <property name="productId" column-name="product_id" item-type="product" data-type="string"/>
+            <property name="catalogs" column-name="sku_id" item-type="catalog" data-type="list"/>
+            <property name="parentProducts" column-name="sku_id" item-type="product" data-type="list"/>
+            <property name="bundleLinks" column-name="sku_id" item-type="skuLink" data-type="list"/>
+            <property name="creationDate" column-name="creation_date" data-type="date"/>
+            <property name="startDate" column-name="start_date" data-type="date"/>
+            <property name="endDate" column-name="end_date" data-type="date"/>
+            <property name="available" column-name="available" data-type="boolean"/>
+            <property name="color" column-name="color" data-type="string"/>
+            <property name="size" column-name="size" data-type="string"/>
+        </table>
+    </item-descriptor>
+
+    <item-descriptor name="configurableSku" display-property="displayName" query-cache-size="1000" super-type="sku">
+        <table name="dcs_config_sku" type="primary" id-column-name="sku_id">
+            <property name="id" column-name="sku_id" data-type="string"/>
+            <property name="configurationModel" column-name="configuration_model" data-type="string"/>
+            <property name="configuratorId" column-name="configurator_id" data-type="string"/>
+        </table>
+    </item-descriptor>
+
+    <item-descriptor name="skuLink" display-property="displayName" query-cache-size="1000">
+        <table name="dcs_sku_link" type="primary" id-column-name="sku_link_id">
+            <property name="id" column-name="sku_link_id" data-type="string"/>
+            <property name="displayName" column-name="display_name" data-type="string"/>
+            <property name="description" column-name="description" data-type="string"/>
+            <property name="parentSku" column-name="parent_sku_id" item-type="sku" data-type="string"/>
+            <property name="childSku" column-name="child_sku_id" item-type="sku" data-type="string"/>
+            <property name="quantity" column-name="quantity" data-type="integer"/>
+        </table>
+    </item-descriptor>
+</gsa-template>

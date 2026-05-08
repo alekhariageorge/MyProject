@@ -1,0 +1,31 @@
+<gsa-template name="Inventory Repository">
+    <header>
+        <name>Inventory Repository</name>
+        <description>Repository for SKU inventory availability and stock levels</description>
+    </header>
+
+    <item-descriptor name="inventory" display-property="skuId" query-cache-size="1000">
+        <table name="dcs_inventory" type="primary" id-column-name="inventory_id">
+            <property name="id" column-name="inventory_id" data-type="string"/>
+            <property name="skuId" column-name="sku_id" data-type="string"/>
+            <property name="stockLevel" column-name="stock_level" data-type="long"/>
+            <property name="availabilityStatus" column-name="availability_status" data-type="string"/>
+            <property name="backorderLevel" column-name="backorder_level" data-type="long"/>
+            <property name="preorderLevel" column-name="preorder_level" data-type="long"/>
+            <property name="stockThreshold" column-name="stock_threshold" data-type="long"/>
+            <property name="storeId" column-name="store_id" data-type="string"/>
+            <property name="locationId" column-name="location_id" data-type="string"/>
+        </table>
+    </item-descriptor>
+
+    <item-descriptor name="inventoryAvailability" display-property="displayName" query-cache-size="1000">
+        <table name="dcs_inventory_availability" type="primary" id-column-name="availability_id">
+            <property name="id" column-name="availability_id" data-type="string"/>
+            <property name="displayName" column-name="display_name" data-type="string"/>
+            <property name="description" column-name="description" data-type="string"/>
+            <property name="available" column-name="available" data-type="boolean"/>
+            <property name="canBackorder" column-name="can_backorder" data-type="boolean"/>
+            <property name="canPreorder" column-name="can_preorder" data-type="boolean"/>
+        </table>
+    </item-descriptor>
+</gsa-template>

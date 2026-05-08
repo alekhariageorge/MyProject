@@ -1,0 +1,10 @@
+**/target/
+**/build/
+**/.idea/
+**/*.iml
+**/*.iws
+**/*.ipr
+**/.classpath
+**/.project
+**/.settings/
+**/.vscode/

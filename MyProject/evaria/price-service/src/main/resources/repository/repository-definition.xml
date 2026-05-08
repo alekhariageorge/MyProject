@@ -1,0 +1,43 @@
+<gsa-template>
+    <header>
+        <name>Price Lists</name>
+        <description>Repository for managing multiple price lists and their prices</description>
+    </header>
+
+    <!-- Main Price List Item -->
+    <item-descriptor name="priceList" display-property="displayName" query-cache-size="1000">
+        <table name="dcs_price_list" type="primary" id-column-name="price_list_id">
+            <property name="id" column-name="price_list_id" data-type="string"/>
+            <property name="displayName" column-name="display_name" data-type="string"/>
+            <property name="description" column-name="description" data-type="string"/>
+            <property name="creationDate" column-name="creation_date" data-type="timestamp"/>
+            <property name="lastModDate" column-name="last_mod_date" data-type="timestamp"/>
+            <property name="startDate" column-name="start_date" data-type="timestamp"/>
+            <property name="endDate" column-name="end_date" data-type="timestamp"/>
+            <property name="locale" column-name="locale" data-type="string"/>
+            <property name="basePriceList" column-name="base_price_list" item-type="priceList"/>
+        </table>
+    </item-descriptor>
+
+    <!-- The Actual Price Entry for a SKU/Product -->
+    <item-descriptor name="price" display-property="id" query-cache-size="1000">
+        <table name="dcs_price" type="primary" id-column-name="price_id">
+            <property name="id" column-name="price_id" data-type="string"/>
+            <property name="priceList" column-name="price_list" item-type="priceList" required="true"/>
+            <property name="productId" column-name="product_id" data-type="string"/>
+            <property name="skuId" column-name="sku_id" data-type="string"/>
+            <property name="pricingScheme" column-name="pricing_scheme" data-type="int"/>
+            <property name="listPrice" column-name="list_price" data-type="double"/>
+            <property name="complexPrice" column-name="complex_price" item-type="complexPrice"/>
+        </table>
+    </item-descriptor>
+
+    <!-- Used for Volume/Tiered Pricing -->
+    <item-descriptor name="complexPrice" display-property="id">
+        <table name="dcs_complex_price" type="primary" id-column-name="complex_price_id">
+            <property name="id" column-name="complex_price_id" data-type="string"/>
+            <property name="levels" column-name="complex_price_id" item-type="priceLevel" data-type="list"/>
+        </table>
+    </item-descriptor>
+
+</gsa-template>

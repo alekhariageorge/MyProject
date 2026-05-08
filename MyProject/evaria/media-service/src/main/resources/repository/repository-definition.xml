@@ -1,0 +1,34 @@
+<gsa-template name="Media Repository">
+    <header>
+        <name>Media Repository</name>
+        <description>Repository for external and internal media items</description>
+    </header>
+
+    <item-descriptor name="media-external" display-property="displayName" query-cache-size="1000">
+        <table name="media_external" type="primary" id-column-name="media_id">
+            <property name="id" column-name="media_id" data-type="string"/>
+            <property name="mediaType" column-name="media_type" data-type="string"/>
+            <property name="displayName" column-name="display_name" data-type="string"/>
+            <property name="description" column-name="description" data-type="string"/>
+            <property name="url" column-name="url" data-type="string"/>
+            <property name="mimeType" column-name="mime_type" data-type="string"/>
+            <property name="altText" column-name="alt_text" data-type="string"/>
+            <property name="width" column-name="width" data-type="integer"/>
+            <property name="height" column-name="height" data-type="integer"/>
+        </table>
+    </item-descriptor>
+
+    <item-descriptor name="media-internal-binary" display-property="displayName" query-cache-size="1000">
+        <table name="media_internal_binary" type="primary" id-column-name="media_id">
+            <property name="id" column-name="media_id" data-type="string"/>
+            <property name="mediaType" column-name="media_type" data-type="string"/>
+            <property name="displayName" column-name="display_name" data-type="string"/>
+            <property name="description" column-name="description" data-type="string"/>
+            <property name="path" column-name="path" data-type="string"/>
+            <property name="mimeType" column-name="mime_type" data-type="string"/>
+            <property name="altText" column-name="alt_text" data-type="string"/>
+            <property name="width" column-name="width" data-type="integer"/>
+            <property name="height" column-name="height" data-type="integer"/>
+        </table>
+    </item-descriptor>
+</gsa-template>
