@@ -22,6 +22,9 @@ public class PriceController {
     @GetMapping("/sku/{skuId}")
     public SkuPriceDTO getSkuPrice(@PathVariable String skuId) {
         RepositoryItem skuPrice = priceService.getSkuPrice(skuId);
+        if (skuPrice == null) {
+            return null;
+        }
         return new SkuPriceDTO(skuPrice);
     }
 }

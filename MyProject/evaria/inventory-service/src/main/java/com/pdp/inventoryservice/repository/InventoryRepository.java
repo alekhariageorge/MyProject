@@ -13,7 +13,6 @@ public class InventoryRepository extends RepositoryInfo {
 
     public InventoryRepository() {
         super("repository/repository-definition.xml");
-        addItems("repository/add-items.xml");
     }
 
     public RepositoryItem findInventoryBySkuId(String skuId) {

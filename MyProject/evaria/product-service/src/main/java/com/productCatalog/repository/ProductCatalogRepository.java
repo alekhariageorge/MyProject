@@ -11,7 +11,6 @@ public class ProductCatalogRepository extends RepositoryInfo {
 
     public ProductCatalogRepository() {
         super("repository/repository-definition.xml");
-        addItems("repository/add-items.xml");
     }
 
     public RepositoryItem findProductById(String productId) {

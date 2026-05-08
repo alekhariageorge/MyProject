@@ -10,7 +10,6 @@ import java.util.Map;
 public class PriceListRepository extends RepositoryInfo {
     public PriceListRepository() {
         super("repository/repository-definition.xml");
-        addItems("repository/add-items.xml");
     }
 
     public RepositoryItem findPriceBySkuId(String skuId) {

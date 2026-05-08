@@ -10,17 +10,28 @@ public class SkuPriceDTO   {
     public SkuPriceDTO() {}
 
     public SkuPriceDTO(RepositoryItem itemPrice) {
-        final String listPrice = (String)itemPrice.getPropertyValue("currencyCode") +
-                itemPrice.getPropertyValue("listPrice");
-        final String salePrice = (String)itemPrice.getPropertyValue("currencyCode") +
-                itemPrice.getPropertyValue("salePrice");
-        final String skuId = (String)itemPrice.getPropertyValue("skuId");
+        final String currencyCode = getStringValue(itemPrice, "currencyCode");
+        final String listPrice = formatPrice(currencyCode, getStringValue(itemPrice, "listPrice"));
+        final String salePrice = formatPrice(currencyCode, getStringValue(itemPrice, "salePrice"));
+        final String skuId = getStringValue(itemPrice, "skuId");
         this.skuListPrice = listPrice;
         this.skuSalePrice = salePrice;
         this.skuId = skuId;
-        System.out.println("LIST PRICE: " + listPrice);
-        System.out.println("SALE PRICE: " + salePrice);
-        System.out.println("SKU ID: " + skuId);
+    }
+
+    private String getStringValue(RepositoryItem itemPrice, String propertyName) {
+        Object value = itemPrice.getPropertyValue(propertyName);
+        return value == null ? "" : value.toString();
+    }
+
+    private String formatPrice(String currencyCode, String price) {
+        if (price.isBlank()) {
+            return null;
+        }
+        if (currencyCode.isBlank()) {
+            return price;
+        }
+        return currencyCode + " " + price;
     }
 
     public String getSkuId() {

@@ -1,0 +1,5 @@
+item-descriptor,id,mediaType,displayName,description,url,mimeType,altText,width,height,path
+media-external,sku1001-red-large,image,Winter Ski Jacket Red Large Image,Large product image for the red ski jacket SKU,https://cdn.example.com/products/sku1001-red-large.jpg,image/jpeg,Red winter ski jacket,1200,1600,
+media-external,sku1001-blue-large,image,Winter Ski Jacket Blue Large Image,Large product image for the blue ski jacket SKU,https://cdn.example.com/products/sku1001-blue-large.jpg,image/jpeg,Blue winter ski jacket,1200,1600,
+media-external,sku1001-black-large,image,Winter Ski Jacket Black Large Image,Large product image for the black ski jacket SKU,https://cdn.example.com/products/sku1001-black-large.jpg,image/jpeg,Black winter ski jacket,1200,1600,
+media-internal-binary,prod1001-thumbnail,image,Winter Ski Jacket Thumbnail,Thumbnail image for the winter ski jacket product,,image/jpeg,Winter ski jacket thumbnail,300,400,/images/products/prod1001-thumbnail.jpg

@@ -1,4 +1,5 @@
-<gsa-template>
+<?xml version="1.0" encoding="UTF-8"?>
+<gsa-template name="Price Lists">
     <header>
         <name>Price Lists</name>
         <description>Repository for managing multiple price lists and their prices</description>
@@ -26,8 +27,10 @@
             <property name="priceList" column-name="price_list" item-type="priceList" required="true"/>
             <property name="productId" column-name="product_id" data-type="string"/>
             <property name="skuId" column-name="sku_id" data-type="string"/>
-            <property name="pricingScheme" column-name="pricing_scheme" data-type="int"/>
+            <property name="pricingScheme" column-name="pricing_scheme" data-type="integer"/>
             <property name="listPrice" column-name="list_price" data-type="double"/>
+            <property name="salePrice" column-name="sale_price" data-type="double"/>
+            <property name="currencyCode" column-name="currency_code" data-type="string"/>
             <property name="complexPrice" column-name="complex_price" item-type="complexPrice"/>
         </table>
     </item-descriptor>

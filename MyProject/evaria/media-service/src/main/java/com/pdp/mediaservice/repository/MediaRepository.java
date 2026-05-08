@@ -13,7 +13,6 @@ public class MediaRepository extends RepositoryInfo {
 
     public MediaRepository() {
         super("repository/repository-definition.xml");
-        addItems("repository/add-items.xml");
     }
 
     public RepositoryItem findMediaById(String mediaId) {
